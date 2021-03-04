@@ -11,3 +11,43 @@ h5,
 h6 {
   font-family: "JetBrains Mono", monospace;
 }
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Componentes */
+.header {
+  background: yellow;
+  display: flex;
+  justify-content: space-between;
+}
+.titulo {
+}
+.nav {
+}
+.nav ul {
+  display: flex;
+  border: 1px solid black;
+  gap: 20px;
+  padding-right: 20px;
+}
+.nav ul li {
+}
+.saludo {
+  height: 600px;
+  background: lightskyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.saludo p {
+  max-width: 60vw;
+  margin: auto;
+  text-align: center;
+}
