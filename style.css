@@ -22,25 +22,30 @@ a {
 
 /* Componentes */
 .header {
-  background: yellow;
+  background: white;
   display: flex;
   justify-content: space-between;
 }
 .titulo {
+  padding-left: 80px;
+  padding-top: 20px;
 }
 .nav {
 }
 .nav ul {
   display: flex;
-  border: 1px solid black;
+  border: 1px solid white;
   gap: 20px;
-  padding-right: 20px;
+  padding-right: 80px;
+  padding-top: 20px;
+  color: black;
 }
 .nav ul li {
 }
 .saludo {
   height: 600px;
-  background: lightskyblue;
+  font-size: 15pt;
+  background: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,5 +54,7 @@ a {
 .saludo p {
   max-width: 60vw;
   margin: auto;
-  text-align: center;
+  text-align: left;
+  padding-right: 100px;
+  padding-left: 100px;
 }
