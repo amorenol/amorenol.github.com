@@ -22,31 +22,28 @@ a {
 
 /* Componentes */
 .header {
-  position: absolute;
-  top: 40px;
-  right: 120px;
-  
-  left: 200px;
-  background: white;
+  position: fixed;
+  background-color: rgb(180 180 180 / 89%);
+  top: 0;
+  margin: auto;
   display: flex;
-  width: 90vw;
+  align-items: center;
+  width: 100vw;
 }
 .titulo {
-  width: fit-content;
+  padding-left: 80px;
   /* position: fixed; */
 }
 .nav {
   margin-left: auto;
+  padding-right: 80px;
   /* position: fixed; */
 }
 .nav ul {
   display: flex;
   gap: 20px;
-  padding-right: 80px;
-  padding-top: 20px;
+
   /* color: black; */
-}
-.nav ul li {
 }
 .nav ul li {}
 .saludo {
