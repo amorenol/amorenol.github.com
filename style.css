@@ -12,7 +12,7 @@
   --h6: 16px;
 }
 body {
-  font-family:var(--font-base);
+  font-family: var(--font-base);
 }
 h1,
 h2,
@@ -20,46 +20,61 @@ h3,
 h4,
 h5,
 h6 {
-font-family:var(--font-base);
+  font-family: var(--font-base);
 }
 
 ul li {
-  list-style: none;
+  list-style-type: none;
 }
 
-a {
+ul li a {
   text-decoration: none;
+  color: black;
 }
 
 /* Componentes */
 .header {
   position: fixed;
-  background-color: rgb(180 180 180 / 89%);
+  background-color: rgb(255 255 255 / 80%);
   top: 0;
   margin: auto;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   width: 100vw;
 }
 .titulo {
-  padding-left: 80px;
+  padding: 0 8.3vw;
   /* position: fixed; */
 }
+
 .nav {
   margin-left: auto;
   padding-right: 80px;
   /* position: fixed; */
 }
+
 .nav ul {
   display: flex;
   gap: 20px;
 
   /* color: black; */
 }
-.nav ul li {}
+
+.nav ul li {
+}
+
+nav a:hover {
+  color: gray;
+  text-decoration: underline;
+}
+
+.underline {
+  padding-bottom: 0.25rem;
+}
+
 .saludo {
-  height: 600px;
-  font-size: 15pt;
+  height: 1000px;
+  font-size: 18pt;
   background: white;
   display: flex;
   justify-content: center;
@@ -72,22 +87,83 @@ a {
   text-align: left;
 }
 
-.gridproyectos {
-  display: grid;
-  grid-template-columns: repeat(4, ifr);
-  grid-template-columns: (3, ifr);
+/*
+    CSS funciona seleccionando elementos y aplicándoles estilos
+    en la siguiente linea se seleccionan únicamente la clase img-wrapper en la que el mouse haga hover
+    Y sobre dentro de ese elemento selecciona la clase img-pie
+  */
+.img-wrapper:hover {
+  display: block; /* con display:block mostramos el elemento */
 }
 
 /* Componentes */
 .proyecto {
   background-color: white;
+  box-sizing: border-box;
+  padding: 0 8.3vw;
+
+  display: grid;
+  grid-gap: 90px;
+  grid-template-columns: 1fr 1fr;
+  background-attachment: fixed;
+  box-sizing: border-box;
 }
+
 .proyecto-imagen {
-  background-color: lightskyblue;
+  background-color: yellow;
+  box-sizing: border-box;
+}
+
+.proyecto-imagen:hover {
+  box-sizing: border-box;
+  display: block;
+  opacity: 0;
+  background: #000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .proyecto-titulo {
-  background-color: lightseagreen;
+  font-size: 12pt;
+  background-color: yellow;
+  font-weight: 500;
+  width: 33%;
+  line-height: 1.75rem;
+  top: calc(100% + 24px);
 }
+
 .proyecto-categoria {
-  background-color: lightsalmon;
+  font-size: 10pt;
+  color: gray;
+  background-color: white;
+  font-weight: 100;
+  width: 33%;
+}
+
+.footer {
+  background-color: black;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacto {
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: black;
+  color: white;
+}
+
+.grid__contacto {
+  display: block;
+  width: 38%;
+  float: left;
+  padding-top: 100px;
+  padding-left: 180px;
+}
+
+.grid___contacto {
+  display: block;
+  float: left;
+  padding-top: 100px;
 }
