@@ -13,6 +13,9 @@
 }
 body {
   font-family: var(--font-base);
+  font-family: var(--font-base);
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAVCAQAAADhwnZkAAABQUlEQVQYGYXBvyuEcQDH8fdzDPIj+ZVC0qnz47nBRUgUxdlsYrBgYeAvMFrJaJPBYGc1GVgkJddlcViPKJ7H3fP96O64noeL1wugmX+N9GnwtXKXMH+oH/YcHZhpL5JmkyZKa08klfOkHW/MC9+zRjW/bK97KnrQhjeUbbtmjnJ8rmJGP9yY1Wws03jOFFXkrdTrTKWcmnHxRJ5FZkGlHJrIOy18OY0qqyBHi17rJTUUzVTpWEETssQLB/i8zyjoTrYQF/gcdelNQSkTzdKPz0C52VfOm5blqiBlohn68XmeVM68yhSXq4KUsV16KNoPK609NQiFFJernFvT49BJUQdmRR1CGBRSXK6SpjtDLwGPFUJ8EMdBIY0qIjxmCdhCGJYAGwchhDghoBbDMQU2DkIksPhhHYtvNg4JLP5Rh0XeJ07IMbAmMXcBAAAAAElFTkSuQmCC),
+    auto;
 }
 h1,
 h2,
@@ -102,17 +105,59 @@ nav a:hover {
 }
 
 /* Componentes */
-.proyectos {
-  background-color: white;
+
+.proyectos-contenedor {
+  max-width: 90vw;
+  margin: 30px auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-auto-rows: 400px;
-  gap: 40px;
-  max-width: 80vw;
-  margin-left: auto;
-  margin-right: auto;
+  grid-row-gap: 200px;
 }
 
+/* .proyectos-contenedor img {
+   max-width: 400px;
+} */
+
+.proyectos-contenedor .dos-imagenes {
+  display: flex;
+  justify-content: space-evenly;
+}
+.proyectos-contenedor .dos-imagenes img {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+}
+
+.proyectos-contenedor .una-imagen {
+  margin: 70px;
+}
+.proyectos-contenedor .una-imagen img {
+  width: 100%;
+  max-width: 600px;
+  max-width: none;
+  height: 100%;
+}
+
+.proyectos-contenedor .una-imagenes {
+  display: flex;
+  justify-content: flex-end;
+}
+.proyectos-contenedor .una-imagenes img {
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  align-items: left;
+}
+
+.proyectos-contenedor .unas-imagenes {
+  display: flex;
+  justify-content: flex-start;
+}
+.proyectos-contenedor .unas-imagenes img {
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  align-items: left;
+}
 /* .proyectos > *:not(.proyecto-full-width) {
 } */
 
@@ -156,6 +201,47 @@ nav a:hover {
   /* width: 33%; */
 }
 
+.section {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  transition: transform 500ms;
+  display: block;
+}
+
+.container img {
+  width: 100%;
+  opacity: 1;
+  height: auto;
+  display: block;
+}
+
+.section .container:focus,
+.section .container:hover {
+  z-index: 1;
+}
+
+.descripcion {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 550px;
+}
+
+.container:hover .descripcion {
+  opacity: 0.5;
+}
+
 .footer {
   max-width: 80vw;
   padding: 20px;
@@ -172,7 +258,6 @@ nav a:hover {
   background-color: black;
   color: white;
 }
-
 .grid__contacto {
   display: block;
   width: 38%;
@@ -180,7 +265,6 @@ nav a:hover {
   padding-top: 100px;
   padding-left: 180px;
 }
-
 .grid___contacto {
   display: block;
   float: left;
