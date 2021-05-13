@@ -125,6 +125,11 @@ nav a:hover {
   width: 100%;
   max-width: 600px;
   height: 100%;
+  transition: all 0.3ms linear;
+}
+
+.proyectos-contenedor .dos-imagenes img:hover {
+  opacity: 0.5;
 }
 
 .proyectos-contenedor .una-imagen {
