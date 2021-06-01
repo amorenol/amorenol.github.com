@@ -380,6 +380,7 @@ nav a:hover {
 .proyecto-imagenes {
   display: grid;
 }
+
 .proyecto-imagenes img {
   width: 100%;
   max-width: 800px;
